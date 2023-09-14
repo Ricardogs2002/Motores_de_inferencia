@@ -1,0 +1,34 @@
+"""
+Created on Wed Sep 13 20:15:09 2023
+@author: 20310388
+"""
+"""
+Premisa 1: Si A, entonces B.
+Premisa 2: B es falso.
+Con base en estas premisas, se concluye:
+
+Conclusión: Por lo tanto, A es falso.
+"""
+# Premisas
+juan_llega_a_tiempo = True
+
+reunion = input("¿La reunion empezó puntual?")
+if reunion.lower() == "si":
+  reunion_comienza_puntualmente = True
+else:
+  reunion_comienza_puntualmente = False
+
+# Verificamos la segunda premisa
+if not reunion_comienza_puntualmente:
+    # Como la reunión no comenzó puntualmente, la segunda parte de la afirmación condicional es falsa
+    reunion_comienza_puntualmente = False
+
+# Comprobamos la conclusión
+if not reunion_comienza_puntualmente:
+    # Según el modus tollens, si la segunda parte de la afirmación condicional es falsa, entonces la primera parte también es falsa
+    juan_llega_a_tiempo = False
+
+if not juan_llega_a_tiempo:
+    print("Juan no llegó a tiempo a la reunión.")
+else:
+    print("Juan llegó a tiempo a la reunión.")
