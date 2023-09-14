@@ -1,0 +1,21 @@
+"""
+Created on Wed Sep 13 20:07:13 2023
+@author: 20310388
+"""
+lluvia =input("¿Llueve? ")
+si_llueve_entonces_mojado = True
+
+if lluvia.lower() == "si":
+    si_llueve = True
+else:
+    si_llueve = False
+
+if si_llueve and si_llueve_entonces_mojado:
+    suelo_mojado = True
+else:
+    suelo_mojado = False
+
+if suelo_mojado:
+    print("El suelo está mojado.")
+else:
+    print("El suelo no está mojado.")
